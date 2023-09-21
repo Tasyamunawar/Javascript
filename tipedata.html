@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data</title>
+  </head>
+  <body>
+    <h1>Tipe Data Javascript</h1>
+    <!-- String = Teks
+    Number = Nomor
+    Boolean = True atau False
+    Array = Banyak data -->
+
+    <h2 id="number"></h2>
+    <h2 id="string"></h2>
+    <h2 id="boolean"></h2>
+    <h2 id="array"></h2>
+
+    <script>
+      // kalo misalnya 40.4 itu vluet itu desimal
+    //   semua gak bisa menggunakan bilangan oktal (0)
+      var dataNumber = 20;
+
+      console.log(dataNumber);
+      document.getElementById("number").innerHTML = dataNumber;
+
+      // di data string ada escape character ( \' buat kutip satu, \" buat tanda kutip dua )
+      // kalo \n itu kaya enter
+      // kalo \t buat tab
+      // kalo \b buat simbol kotak
+      // \u00AE buat buletan R
+
+    //   pake spasi belakang nama atau tasya buat spasi kalimat
+      var dataString = "tasya ";
+
+    //  di belakang dataString .length buat menghitung huruf misalnya "tasya" bakal langsung jadi angka 5
+    // .toUpperCase() buat huruf menjadi capslock semua sama harus pake dalam kurung
+    // .repeat(4) buat mengulang kalimat + bisa di ubah menjadi berapa aja angkanya
+    // .tolowerCase() buat huruf kecil semua
+    // .slice(4) buat mempotong kalimat dari depan tergantung berapa huruf yang mau kita potong
+    // .replace("m", "l") buat mengganti huruf asalnya m jadi l
+
+      console.log (dataString.toUpperCase(4));
+      document.getElementById("string").innerHTML = dataString.repeat(4);
+
+      // Boolean = true atau false
+
+      var dataBoolean = true;
+
+      console.log(dataBoolean);
+      document.getElementById("boolean").innerHTML = dataBoolean;
+
+      // Array bisa nyimpen banyak data apapun tipenya bakal butuh []
+
+      var dataArray = [ 2, true, 222];
+
+      console.log(dataArray);
+      document.getElementById("array").innerHTML = dataArray;
+    </script>
+  </body>
+</html>

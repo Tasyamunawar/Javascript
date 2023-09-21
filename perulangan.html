@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perulangan</title>
+</head>
+<body>
+    <!-- Perulangan / Looping : proses perulangan suatu blok pernyataan sebanyak yang diinginkan
+    
+    3 Macam Perulangan :
+1. For : Perulangan for (for loop) adalah bentuk perulangan dimana jumlah perulangan sudah diketahui.
+2. While
+3. Do/While-->
+
+    <h1>Belajar Perulangan di Javascript</h1>
+    <p>Mengulang berapa kali nih</p>
+    <input type="number" value="" id="looping"/>
+    <!-- <input type="button" value="Hitung" onclick="ulangfor()"/> -->
+    <input type="button" value="Hitung" onclick="ulangDowhile()"/>
+
+    <script>
+        // 1. Perulangan For
+        function ulangfor(){
+            var angka = document.getElementById("looping").value;
+            for(let a = 1; a <= angka; a++){
+                console.log(a + "ini perulangan for");
+            }
+        }
+
+        // 2. Perulangan While
+        function ulangwhile(){
+            var angka2 = document.getElementById("looping").value;
+            let i = 1;
+            while( i <= angka2){
+                console.log(i + "Ini Prulangan While");
+                i++;    
+            }
+        }
+
+        // 3. Perulangan Do While
+        function ulangDowhile(){
+            var angka3 = document.getElementById("looping").value;
+            let b = 0;
+            do{
+                console.log( b + "Ini Perulangan Do While");
+                b++
+            }
+            while( b <= angka3);
+        }
+    </script>
+</body>
+</html>

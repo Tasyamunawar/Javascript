@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Tipe Data Array</h1>
+    <h1 id="sitak"></h1>
+    <!-- Array boleh diisi sama tipe data apapun -->
+    <!-- Sifatnya dinamis, artinya datanya nambah kalau kita Input manual -->
+    <!-- kalo index itungannya daru 0 sampai seterusnya -->
+
+    <script>
+        let a = ["Jungkook", 20, 21.9, true, null, "pooo"];
+
+        // buat menemukan index di array -> variabel[index]
+        // document.getElementById("sitak").innerHTML = a[3];
+
+        // buat mgitung ada berapa index -> variabel.length ngitungnya dari 1
+        // document.getElementById("sitak").innerHTML = a.length;
+
+        // mau nambah data ke array -> variabel.push(nilai)
+        // document.getElementById("sitak").innerHTML = a.push(80, "eaa", false);
+        // document.getElementById("sitak").innerHTML = a;
+
+        // mengubah data di posisi index -> variabel[panggil index] = nilainya
+        // document.getElementById("sitak").innerHTML = a[0] = "taehyung";
+        // document.getElementById("sitak").innerHTML = a;
+
+        // ngapus data di posisi index -> delete variabel[panggil indexnya]
+        document.getElementById("sitak").innerHTML = delete a[1];
+        document.getElementById("sitak").innerHTML = a;
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktek HMTL dan Javascript</title>
+    <link
+      rel="shortcut icon"
+      href="https://i.pinimg.com/564x/2b/cb/2e/2bcb2ec240099aa34dac9f84c8321b86.jpg"
+      type="image/x-icon"
+    />
+  </head>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    table,th,td {
+      width: 25%;
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: auto;
+      margin: auto;
+      text-align: center;
+    }
+
+    th {
+      background-color: blanchedalmond;
+    }
+    
+    tr:hover {
+        cursor: pointer;
+        background-color: antiquewhite;
+    }
+  </style>
+  <body>
+    <h1>Praktek HTML dan Javascript</h1>
+
+    <table>
+      <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>Score Game</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td style="text-align: left;">Aldi</td>
+        <td><span id="aldi"></span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td style="text-align: left;">Fadli</td>
+        <td><span id="fadli"></span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td style="text-align: left;">Rudi</td>
+        <td><span id="rudi"></span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td style="text-align: left;">Yanto</td>
+        <td><span id="yanto"></span></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: right;">Total Nilai</td>
+        <td id="b"></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: right;">Nilai Rata Rata</td>
+        <td id="c"></td>
+    </tr>
+    </table>
+    <br><br>
+    <table>
+        <tr>
+            <th>Kesimpulan</th>
+        </tr>
+        <tr>
+            <td id="sama"></td>
+        </tr>
+        <tr>
+            <td id="lebihdari"></td>
+        </tr>
+        <tr>
+            <td id="lolos"></td>
+        </tr>
+    </table>
+
+      <script>
+        var nilai = {
+            aldi: 96,
+            fadli: 98,
+            rudi: 97,
+            yanto: 97,
+        }
+
+        var total = nilai.aldi + nilai.fadli + nilai.rudi + nilai.yanto;
+        var rata = total / 4;
+
+        document.getElementById("aldi").innerHTML = nilai.aldi;
+        document.getElementById("fadli").innerHTML = nilai.fadli;
+        document.getElementById("rudi").innerHTML = nilai.rudi;
+        document.getElementById("yanto").innerHTML = nilai.yanto;
+        document.getElementById("b").innerHTML = total;
+        document.getElementById("c").innerHTML = rata;
+
+        // tofixed 2 = itu buat belakangnya ada nol dua
+
+        let Aldi = 96;
+        let Fadli = 98;
+        let Rudi = 97;
+        let Yanto = 97;
+
+        if ( Rudi == Yanto){
+            document.getElementById("sama").innerHTML ="Nilai Rudi dan Yanto sama";
+        }
+        else{
+            document.getElementById("sama").innerHTML ="Nilai Rudi dan Yanto tidak sama";
+        }
+
+        if (Fadli > Aldi){
+            document.getElementById("lebihdari").innerHTML ="Nilai Fadsli lebih besar dari Aldi";
+        }
+        else {
+            document.getElementById("lebihdari").innerHTML ="Nilai Fadli lebih kecil dari Aldi";
+        }
+
+        if (Fadli >= 97 && Rudi >= 97 && Yanto >= 97){
+            document.getElementById("lolos").innerHTML ="Fadli, Rudi, Yanto lolos ke babak berikutnya";
+        }
+        else{
+            document.getElementById("lolos").innerHTML ="Fadli, Rudi, Yanto tidak lolos ke babak berikutnya";
+        }
+        
+      </script>
+     
+  </body>
+</html>

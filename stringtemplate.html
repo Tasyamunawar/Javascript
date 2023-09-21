@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<style>
+    #teks{
+        color: rgb(84, 50, 4);
+    }
+</style>
+<body>
+    <h1>Belajar String Template</h1>
+    <br>
+    <h2 id="teks"></h2>
+
+    <script>
+        let nama = "Tasya";
+        let asal = "Cianjur";
+        let nilai = 80;
+
+        // ${namavariabel} fungsinya untuk manggil variabel
+        document.getElementById("teks").innerHTML = `Nama Saya ${nama} Lulus : ${nilai > 75 && asal == "Cianjur"}`;
+
+        // ini multiline string
+        let multi = `Hallo
+        Saya
+        Tasya`;
+        document.writeln("<pre>");
+        document.writeln(multi);
+        document.writeln("<pre>");
+    </script>
+</body>
+</html>

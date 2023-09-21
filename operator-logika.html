@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Logika</title>
+</head>
+<body>
+    <h1>Operator Logika</h1>
+    <h2 id="logika"></h2>
+
+    <!-- operator logika ada 3 : &&, ||, ! -->
+    <!-- dibacanya and, or atau negasi, note buat command yang diatas -->
+    <script>
+        let nama = "Tasyaa"
+        let email = "tasyamunawar6@gmail.com"
+        let pass = "261004"
+        let hasil;
+    // kalo yang && itu dua duanya harus true
+    // kalo yang || itu salah satunya harus benar
+        // if (email == "tasyamunawar6@gmail.com" && pass == "261004"){
+        //     hasil = "selamat datang "  + nama;
+        //     // di spasinya setelah datang sebelum tanda kutip
+        // }
+        // else{
+        //     hasil = "yahhh gak bisa masukkkk";
+        // }
+
+    // negasi itu selalu di depan huruf dam kurung
+    // kalo negasi di tambah != hasilnya betul
+
+    if (!(email == "tasyamunawar6@gmail.com" && pass == "261004")){
+            hasil = "betul";
+        }
+        else{
+            hasil = "salah";
+        }
+
+        document.getElementById("logika").innerHTML = hasil;
+    </script>
+</body>
+</html>

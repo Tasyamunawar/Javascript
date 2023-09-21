@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- hampir sama dengan Array -->
+    <title>Data Objek</title>
+</head>
+<body>
+    <h1>Jenis Bakso</h1>
+
+    <table border="1">
+        <!-- tr = tag row -->
+        <tr>
+            <!-- th = tag header -->
+            <th>Jenis</th>
+            <th>Harga</th>
+            <th>Deskripsi</th>
+        </tr>
+        <tr>
+            <td><span id="jenis"></span></td>
+            <td><span id="harga"></span></td>
+            <td><span id="deskripsi"></span></td>
+        </tr>
+    </table>
+
+    <script>
+        // var nya di ganti jadi conts buat munculin di console
+        var bakso = {
+            jenis: "Bakso Urat",
+            harga: "12000",
+            deskripsi: function(){
+            return this.jenis + " harganya " + this.harga;}
+        }
+
+        // harus pake sitak atau kurung kurawal
+        console.table({bakso});
+
+        document.getElementById("jenis").innerHTML = bakso.jenis;
+        document.getElementById("harga").innerHTML = bakso.harga;
+        document.getElementById("deskripsi").innerHTML = bakso.deskripsi();
+
+    </script>
+</body>
+</html>
